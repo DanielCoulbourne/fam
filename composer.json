@@ -1,0 +1,42 @@
+{
+    "name": "danielcoulbourne/fam",
+    "description": "Ad-Hoc Laravel Eloquent Relationships from Query Builders",
+    "type": "library",
+    "require": {
+        "php": "^7.4|^8.0",
+        "laravel/framework": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.13",
+        "phpunit/phpunit": "^9.3",
+        "friendsofphp/php-cs-fixer": "^2.16"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Daniel Coulbourne",
+            "email": "daniel.coulbourne@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Fam\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Fam\\Test\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Fam\\FamServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "fix": "vendor/bin/php-cs-fixer fix --allow-risky=yes"
+    }
+}
